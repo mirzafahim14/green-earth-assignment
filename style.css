@@ -1,0 +1,308 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: #f5fff7;
+  color: #1f2937;
+  line-height: 1.6;
+}
+
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 18px 5%;
+  background: white;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+  color: #166534;
+}
+
+.menu {
+  display: flex;
+  list-style: none;
+  gap: 24px;
+}
+
+.menu a {
+  text-decoration: none;
+  color: #374151;
+  font-weight: 600;
+}
+
+.nav-btn,
+.banner-btn,
+.contact-form button,
+.category-btn,
+.add-cart-btn,
+.remove-btn,
+#close-modal {
+  background: #16a34a;
+  color: white;
+  border: none;
+  padding: 10px 18px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.nav-btn:hover,
+.banner-btn:hover,
+.contact-form button:hover,
+.add-cart-btn:hover {
+  background: #15803d;
+}
+
+/* Banner */
+.banner {
+  background:background: url('./assets/hero-leaf1.png');
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.banner-overlay {
+  background: rgba(0,0,0,0.45);
+  color: white;
+  text-align: center;
+  padding: 40px;
+  width: 100%;
+}
+
+.banner-overlay h1 {
+  font-size: 42px;
+  margin-bottom: 14px;
+}
+
+/* About */
+.about {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+  padding: 60px 5%;
+  align-items: center;
+}
+
+.about img {
+  width: 100%;
+  border-radius: 14px;
+}
+
+/* Impact */
+.impact {
+  padding: 60px 5%;
+  text-align: center;
+}
+
+.impact h2 {
+  margin-bottom: 25px;
+}
+
+.impact-cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.impact-card {
+  background: white;
+  padding: 28px;
+  border-radius: 14px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+}
+
+/* Plants section */
+.plants-section {
+  padding: 60px 5%;
+}
+
+.plants-section h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.plants-layout {
+  display: grid;
+  grid-template-columns: 250px 1fr 300px;
+  gap: 20px;
+}
+
+.categories-panel,
+.cart-panel {
+  background: white;
+  border-radius: 14px;
+  padding: 18px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+  height: fit-content;
+}
+
+.category-btn {
+  width: 100%;
+  margin-bottom: 10px;
+  text-align: left;
+  background: #dcfce7;
+  color: #166534;
+}
+
+.category-btn.active {
+  background: #166534;
+  color: white;
+}
+
+.plant-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.plant-card {
+  background: white;
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+}
+
+.plant-card img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+}
+
+.plant-card-content {
+  padding: 16px;
+}
+
+.plant-name {
+  color: #166534;
+  cursor: pointer;
+  margin-bottom: 8px;
+}
+
+.plant-name:hover {
+  text-decoration: underline;
+}
+
+.cart-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  background: #f0fdf4;
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 8px;
+}
+
+.remove-btn {
+  background: #dc2626;
+  padding: 6px 10px;
+}
+
+/* Form */
+.contact-section {
+  padding: 60px 5%;
+  text-align: center;
+}
+
+.contact-form {
+  max-width: 500px;
+  margin: 0 auto;
+  display: grid;
+  gap: 12px;
+}
+
+.contact-form input {
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+}
+
+/* Footer */
+.footer {
+  text-align: center;
+  padding: 20px;
+  background: #14532d;
+  color: white;
+}
+
+/* Spinner */
+.spinner {
+  width: 50px;
+  height: 50px;
+  border: 5px solid #d1fae5;
+  border-top: 5px solid #16a34a;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  margin: 20px auto;
+}
+
+.hidden {
+  display: none;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Modal */
+.plant-modal {
+  width: min(500px, 90%);
+  margin: auto;
+  border: none;
+  border-radius: 14px;
+  padding: 20px;
+}
+
+.plant-modal img {
+  width: 100%;
+  border-radius: 10px;
+  margin-bottom: 12px;
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+  .plants-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .plant-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .about,
+  .impact-cards {
+    grid-template-columns: 1fr;
+  }
+
+  .menu {
+    display: none;
+  }
+}
+
+@media (max-width: 576px) {
+  .plant-container {
+    grid-template-columns: 1fr;
+  }
+
+  .banner-overlay h1 {
+    font-size: 28px;
+  }
+
+  .navbar {
+    flex-direction: column;
+    gap: 12px;
+  }
+}

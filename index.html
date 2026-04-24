@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Plant a Tree</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="logo">🌱 Plant a Tree</div>
+
+    <ul class="menu">
+      <li><a href="#banner">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#plants">Plants</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+
+    <button class="nav-btn">Plant a Tree</button>
+  </nav>
+
+  <!-- Banner -->
+  <section id="banner" class="banner">
+    <div class="banner-overlay">
+      <h1>Grow Green, Build a Better Tomorrow</h1>
+      <p>Choose a tree, support nature, and make the earth healthier for future generations.</p>
+      <button class="banner-btn">Start Planting</button>
+    </div>
+  </section>
+
+  <!-- About -->
+  <section id="about" class="about">
+    <div class="about-image">
+      <img src="./assets/about.png" alt="">
+    </div>
+    <div class="about-text">
+      <h2>About Our Campaign</h2>
+      <p>
+        Our campaign encourages people to plant more trees and create greener communities.
+        Trees improve air quality, provide shade, support wildlife, and reduce environmental damage.
+        By planting one tree today, you help build a healthier tomorrow.
+      </p>
+    </div>
+  </section>
+
+  <!-- Impact -->
+  <section class="impact">
+    <h2>Our Impact</h2>
+    <div class="impact-cards">
+      <div class="impact-card">
+        <h3>10,000+</h3>
+        <p>Trees Planted</p>
+      </div>
+      <div class="impact-card">
+        <h3>5,000+</h3>
+        <p>Volunteers Joined</p>
+      </div>
+      <div class="impact-card">
+        <h3>120+</h3>
+        <p>Communities Reached</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Plants Section -->
+  <section id="plants" class="plants-section">
+    <h2>Plant a Tree Today</h2>
+
+    <div id="spinner" class="spinner hidden"></div>
+
+    <div class="plants-layout">
+      <!-- Categories -->
+      <aside class="categories-panel">
+        <h3>Categories</h3>
+        <div id="category-container"></div>
+      </aside>
+
+      <!-- Cards -->
+      <main>
+        <div id="plant-container" class="plant-container"></div>
+      </main>
+
+      <!-- Cart -->
+      <aside class="cart-panel">
+        <h3>Cart List</h3>
+        <div id="cart-items"></div>
+        <h4>Total: ৳ <span id="total-price">0</span></h4>
+      </aside>
+    </div>
+  </section>
+
+  <!-- Form -->
+  <section id="contact" class="contact-section">
+    <h2>Plant a Tree Today</h2>
+    <form class="contact-form">
+      <input type="text" placeholder="Your Name" required />
+      <input type="email" placeholder="Your Email" required />
+      <input type="number" placeholder="Number of Trees" required />
+      <button type="submit">Submit</button>
+    </form>
+  </section>
+
+  <!-- Modal -->
+  <dialog id="plant-modal" class="plant-modal">
+    <div id="modal-content"></div>
+    <button id="close-modal">Close</button>
+  </dialog>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <p>© 2026 Plant a Tree Campaign. All rights reserved.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
+</html>
